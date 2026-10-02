@@ -1,0 +1,46 @@
+# ---------------------------------------------------------------
+# NEVER COMMIT A REAL ORG'S MANIFEST.
+# manifest/ holds a working copy pulled from a real org. It contains
+# real class names and real system prefixes and must not be published
+# or appear on screen. Generate package.xml instead:
+#     python make-manifest.py 40000 > package.xml
+# ---------------------------------------------------------------
+manifest/
+package.xml
+*.package.xml
+
+# Derived from a real org's manifest. The README leak check passes on it
+# (only standard Salesforce names survive), but it ships only by explicit
+# choice. Delete this line to publish it.
+package-anon.xml
+
+# generated output
+chunks/
+chunks-naive/
+chunks-bytype/
+retrieved/
+force-app/*
+!force-app/.gitkeep
+calibration.json
+retrieve_log.txt
+retrieve_success.txt
+retrieve_errors.txt
+
+# python
+__pycache__/
+*.pyc
+
+# salesforce cli and vs code extension caches
+.sfdx/
+.sf/
+.localdevserver/
+
+# node, if tooling is ever added
+node_modules/
+coverage/
+
+# editor and os
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
